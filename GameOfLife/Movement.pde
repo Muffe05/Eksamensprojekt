@@ -20,8 +20,8 @@ class Movement {
     position = new PVector(x,y);
     r = 6;
     wandertheta = 0;
-    maxspeed = 2;
-    maxforce = 0.05;
+    maxspeed = 10;
+    maxforce = 0.55;
   }
 
   void run() {
@@ -66,8 +66,8 @@ class Movement {
   void display() {
     // Draw a triangle rotated in the direction of velocity
     float theta = velocity.heading() + radians(90);
-    fill(127);
-    stroke(0);
+    fill(127); // Ændre farven af agent af en eller anden grund
+    stroke(0,0,0); // Ændre outline på boardet
     pushMatrix();
     translate(position.x,position.y);
     rotate(theta);

@@ -1,0 +1,3 @@
+//class Red extends Agent{
+  
+  
