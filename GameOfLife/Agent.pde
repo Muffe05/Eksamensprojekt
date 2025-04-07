@@ -1,7 +1,7 @@
 class Agent {
   Movement m;
   boolean isHungry = true;
-
+ 
   Agent(float x, float y) {
     m = new Wander(x, y);
   }
@@ -35,4 +35,5 @@ class Agent {
     PVector t = p.get(index).pos.copy();
     return t;
   }
+  
 }

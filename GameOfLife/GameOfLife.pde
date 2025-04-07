@@ -4,6 +4,8 @@ Board test = new Board(192, 108);
 Agent[] a = new Agent[1];
 ArrayList<Plants> p = new ArrayList<Plants>();
 boolean debug = true;
+ int blue = 0;
+  int red = 0;
 
 void setup() {
   size(1920, 1080);
@@ -27,7 +29,7 @@ void setup() {
 
 
 void draw() {
-
+scoreDisplay();
   //test.nextGen2();
   test = r.GameOfLife(test);
   //test = r.MyRules(test);
@@ -48,9 +50,13 @@ void draw() {
     p.get(i).update();
   }
   
-  
+ 
 }
 
+ void scoreDisplay() {
+  text("Blue: "+blue, 0, 50);
+   text("Red: "+red, 300, 50);
+   }
 
 void mousePressed() {
 
