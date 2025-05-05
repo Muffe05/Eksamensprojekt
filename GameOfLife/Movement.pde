@@ -13,6 +13,7 @@ class Movement {
   float wandertheta;
   float maxforce;    // Maximum steering force
   float maxspeed;    // Maximum speed
+  color swag;
 
   Movement(float x, float y) {
     acceleration = new PVector(0,0);
@@ -66,7 +67,7 @@ class Movement {
   void display() {
     // Draw a triangle rotated in the direction of velocity
     float theta = velocity.heading() + radians(90);
-    fill(127); // Ændre farven af agent af en eller anden grund
+    fill(swag); // Ændre farven af agent af en eller anden grund
     stroke(0,0,0); // Ændre outline på boardet
     pushMatrix();
     translate(position.x,position.y);
