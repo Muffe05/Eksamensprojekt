@@ -22,7 +22,7 @@ class Movement {
     r = 6;
     wandertheta = 0;
     maxspeed = 10;
-    maxforce = 0.55;
+    maxforce = 0.75;
   }
 
   void run() {

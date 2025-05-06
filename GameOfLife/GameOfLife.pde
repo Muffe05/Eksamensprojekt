@@ -1,7 +1,8 @@
 rules r = new rules();
 Board test = new Board(192, 108);
 
-Agent[] a = new Agent[1];
+Red[] a = new Red[3];
+Blue[] b = new Blue[3];
 ArrayList<Plants> p = new ArrayList<Plants>();
 boolean debug = true;
 int blue = 0;
@@ -13,7 +14,10 @@ void setup() {
   //test.initBoard(1, color(0, 0, 255));
 
   for (int i = 0; i<a.length; i++ ) {
-    a[i] = new Agent(random(100, 400), random(400, 100));
+    a[i] = new Red(random(100, 400), random(400, 100));
+  }
+  for (int i = 0; i<a.length; i++ ) {
+    b[i] = new Blue(random(100, 400), random(400, 100));
   }
   for (int i = 0; i<test.col; i++ ) {
     for (int j = 0; j<test.row; j++ ) {
@@ -36,6 +40,9 @@ void draw() {
 
   for (int i = 0; i<a.length; i++) {
     a[i].update();
+  }
+  for (int i = 0; i<a.length; i++) {
+    b[i].update();
   }
   p.clear();
   for (int i = 0; i<test.col; i++ ) {
