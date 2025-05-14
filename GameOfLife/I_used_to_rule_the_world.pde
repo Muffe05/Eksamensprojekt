@@ -11,10 +11,10 @@ class rules {
     for (int i= 1; i<b.col-1; i++) {
       for (int j = 1; j <b.row-1; j++) {
         if (b.countN(i, j) < 2){
-          temp[i][j].setColor(color(255)); // Board color
+          temp[i][j].setColor(color(0)); // Board color
           temp[i][j].setValue(0);}
         else if (b.countN(i, j) > 3){
-          temp[i][j].setColor(color(255)); // Ikke rør ved denne her
+          temp[i][j].setColor(color(0)); // Ikke rør ved denne her
           temp[i][j].setValue(0);}
         else if (b.countN(i, j) == 3){
           temp[i][j].setColor(color(0,105,0)); // Cell color
